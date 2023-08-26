@@ -1,5 +1,0 @@
-{
-    "board": "arduino:avr:uno",
-    "programmer": "avrisp",
-    "sketch": "A4988.ino"
-}
