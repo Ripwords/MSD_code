@@ -39,6 +39,13 @@ void initSystem()
   removerS.attach(REMOVER);
   nut1S.attach(NUT_1);
   nut2S.attach(NUT_2);
+
+  // Servo initial positions
+  bottomS.write(180);
+  topS.write(180);
+  removerS.write(180);
+  nut1S.write(180);
+  nut2S.write(180);
 }
 
 void activateNut1()
@@ -51,6 +58,16 @@ void activateNut2()
 
 void activateBottom()
 {
+  for (int i = 180; i >= 0; i--)
+  {
+    bottomServo.write(i);
+    delay(10);
+  }
+  for (int i = 0; i <= 180; i++)
+  {
+    bottomServo.write(i);
+    delay(10);
+  }
 }
 
 void activateTop()
